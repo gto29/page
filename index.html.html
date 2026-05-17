@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Augusto Gonçalves - Portfólio</title>
+    <style>
+        /* CONFIGURAÇÕES GERAIS / PALETA DE CORES */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        :root {
+            --bg-principal: #0d1117;
+            --bg-card: #161b22;
+            --border-color: #30363d;
+            --cor-texto: #c9d1d9;
+            --cor-titulo: #f0f6fc;
+            --cor-destaque: #58a6ff;
+            --cor-hover: #1f6feb;
+        }
+
+        body {
+            background-color: var(--bg-principal);
+            color: var(--cor-texto);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* CABEÇALHO */
+        header {
+            padding: 24px 0;
+            border-bottom: 1px solid var(--border-color);
+            background-color: rgba(13, 17, 23, 0.8);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(8px);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--cor-titulo);
+            letter-spacing: 0.5px;
+        }
+
+        nav a {
+            color: var(--cor-texto);
+            text-decoration: none;
+            margin-left: 24px;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+
+        nav a:hover {
+            color: var(--cor-destaque);
+        }
+
+        /* PERFIL / HERO */
+        .hero {
+            padding: 60px 0 40px 0;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            color: var(--cor-titulo);
+            margin-bottom: 12px;
+        }
+
+        .info-rapida {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+            font-size: 0.9rem;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            background-color: var(--bg-card);
+            padding: 6px 14px;
+            border-radius: 20px;
+            border: 1px solid var(--border-color);
+        }
+
+        .info-item a {
+            color: var(--cor-destaque);
+            text-decoration: none;
+        }
+
+        .info-item a:hover {
+            text-decoration: underline;
+        }
+
+        /* SEÇÃO SOBRE MIM */
+        .secao {
+            padding: 40px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .secao-titulo {
+            font-size: 1.6rem;
+            color: var(--cor-titulo);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .secao-titulo::before {
+            content: "";
+            display: inline-block;
+            width: 4px;
+            height: 24px;
+            background-color: var(--cor-destaque);
+            border-radius: 2px;
+        }
+
+        .sobre-texto {
+            font-size: 1.1rem;
+            color: var(--cor-texto);
+            text-align: justify;
+        }
+
+        /* SEÇÃO PROJETOS */
+        .grid-projetos {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin-top: 20px;
+        }
+
+        .card-projeto {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 24px;
+            transition: transform 0.2s, border-color 0.2s;
+        }
+
+        .card-projeto:hover {
+            transform: translateY(-2px);
+            border-color: var(--cor-destaque);
+        }
+
+        /* Marcador visual sem imagem */
+        .card-tag {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: var(--cor-destaque);
+            background-color: rgba(88, 166, 255, 0.1);
+            padding: 4px 8px;
+            border-radius: 4px;
+            margin-bottom: 12px;
+        }
+
+        .card-projeto h3 {
+            color: var(--cor-titulo);
+            margin-bottom: 12px;
+            font-size: 1.3rem;
+        }
+
+        /* CURRÍCULO E ATIVIDADES */
+        .lista-atividades {
+            list-style: none;
+        }
+
+        .lista-atividades li {
+            background-color: var(--bg-card);
+            border
